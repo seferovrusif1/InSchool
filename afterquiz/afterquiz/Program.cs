@@ -35,20 +35,22 @@
 
 
             //Task 2 consol write read
-            Console.WriteLine("arrayin olcusunu daxil edin");
-            int n = Convert.ToInt32(Console.ReadLine());
-            int[] nums = new int[n];
-            Console.WriteLine("yeni eded daxil edeceksense 'y' yaz eks halda her hansisa bir sey yaz");
-            string yes = Console.ReadLine();
-            if (yes == "y")
-            {
-                Console.WriteLine("ededleri daxil edin:");
-                for (int i = 0; i < nums.Length; i++)
-                {
-                    nums[i] =Convert.ToInt32(Console.ReadLine());
-                }
-            }
-           
+            Console.WriteLine("Arrayin olcusunu daxil edin:");
+int n =Convert.ToInt32(Console.ReadLine());
+int[]nums = new int[n];
+
+    for (int i = 0; i < nums.Length; i++)
+    {
+    Console.WriteLine("yeni eded daxil edeceksense 'Y','y','Yes','yes' yaz eks halda her hansisa bir sey yaz");
+    string yes = Console.ReadLine();
+    if (yes == "y" || yes == "Y" || yes == "Yes" || yes == "yes")
+    {
+        Console.WriteLine("eded daxil edin: ");
+
+        nums[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    else { break; }
+    }
 
         }
     }
